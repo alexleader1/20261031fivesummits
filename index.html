@@ -150,7 +150,11 @@ a { color: var(--accent); }
 }
 .brand-mark svg { width: 22px; height: 22px; }
 .brand-sub { color: var(--text-muted); font-weight: 550; }
-@media (max-width: 420px) { .brand-sub { display: none; } }
+/* Small phones: keep the full two-tone name on one line by scaling it down */
+@media (max-width: 420px) {
+  .nav-inner { padding: .85rem 1rem; gap: .75rem; }
+  .brand { font-size: clamp(.8rem, 3.9vw, 1.02rem); gap: .5rem; white-space: nowrap; }
+}
 
 .nav-links { display: flex; gap: .35rem; align-items: center; }
 .nav-links a {
