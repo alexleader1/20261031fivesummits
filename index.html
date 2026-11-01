@@ -750,8 +750,8 @@ footer {
   });
 
   /* ---- Email assembled at runtime so scrapers don't get a plain string ---- */
-  var user = ["leader", "alex1"].join(".");
-  var host = ["gmail", "com"].join(".");
+  var user = "alex";
+  var host = ["fivesummitsco", "com"].join(".");
   var addr = user + String.fromCharCode(64) + host;
   var btn = document.getElementById("emailBtn");
   btn.setAttribute("href", "mailto:" + addr + "?subject=" +
